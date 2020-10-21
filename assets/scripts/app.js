@@ -2,40 +2,46 @@ const defaultResult = 0;
 
 let currentResult = defaultResult;
 
+// this is a comment
+/* block comment
+    continuing.
+ */
+// operators ++ is plus 1 en -- is min 1, let op ++currentResult is anders dan currentResult++
+
 function getUserNumberInput() {
     return parseInt(userInput.value);
 }
 
 function createAndWriteOutput(operand, resultBeforeCalc,enteredNumber) {
     const calcDescription = `${resultBeforeCalc} ${operand} ${enteredNumber}`;
-    outputResult(currentResult, calcDescription);
+    outputResult(currentResult, calcDescription); //from Vendor file
 }
 
 function add() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult
-    currentResult = currentResult + enteredNumber;
+    currentResult += enteredNumber;
     createAndWriteOutput('+', initialResult, enteredNumber);
 }
 
 function subtract() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult
-    currentResult = currentResult - enteredNumber;
+    currentResult -= enteredNumber;
     createAndWriteOutput('-', initialResult, enteredNumber);
 }
 
 function multiply() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult
-    currentResult = currentResult * enteredNumber;
+    currentResult *= enteredNumber;
     createAndWriteOutput('*', initialResult, enteredNumber);
 }
 
 function divide() {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult
-    currentResult = currentResult / enteredNumber;
+    currentResult /= enteredNumber;
     createAndWriteOutput('/', initialResult, enteredNumber);
 }
 
