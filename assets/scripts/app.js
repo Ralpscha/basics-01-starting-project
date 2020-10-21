@@ -1,6 +1,6 @@
 const defaultResult = 0;
-
 let currentResult = defaultResult;
+let logEntries = [];
 
 // this is a comment
 /* block comment
@@ -22,6 +22,14 @@ function add() {
     const initialResult = currentResult
     currentResult += enteredNumber;
     createAndWriteOutput('+', initialResult, enteredNumber);
+    const logEntry = {
+        operation: 'ADD',
+        prevResult: initialResult,
+        number: enteredNumber,
+        newResult: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function subtract() {
