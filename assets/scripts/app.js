@@ -22,7 +22,7 @@ function writeToLog(operation, initialResult, enteredNumber, currentResult) {
         operation: operation,
         prevResult: initialResult,
         number: enteredNumber,
-        newResult: currentResult
+        result: currentResult
     };
     logEntries.push(logEntry);
     console.log(logEntry.operation);
