@@ -1,10 +1,10 @@
 const defaultResult = 0;
 
 let currentResult = defaultResult;
-currentResult = (currentResult + 10) * 3 /2 - 1;
 
 function add() {
-    currentResult = currentResult + userInput.value;
+    currentResult = currentResult + parseInt(userInput.value);
+    //+userInput.value cast het ook.
     outputResult(currentResult, '');
 }
 
