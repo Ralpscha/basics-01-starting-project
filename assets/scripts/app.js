@@ -17,7 +17,7 @@ function createAndWriteOutput(operand, resultBeforeCalc,enteredNumber) {
     outputResult(currentResult, calcDescription); //from Vendor file
 }
 
-function logEntry(operation, initialResult, enteredNumber, currentResult) {
+function writeToLog(operation, initialResult, enteredNumber, currentResult) {
     const logEntry = {
         operation: operation,
         prevResult: initialResult,
@@ -43,7 +43,7 @@ function add() {
     // logEntries.push(logEntry);
     // console.log(logEntry.operation);
     // console.log(logEntries);
-    logEntry('ADD', initialResult, enteredNumber, currentResult);
+    writeToLog('ADD', initialResult, enteredNumber, currentResult);
 }
 
 function subtract() {
@@ -51,7 +51,7 @@ function subtract() {
     const initialResult = currentResult
     currentResult -= enteredNumber;
     createAndWriteOutput('-', initialResult, enteredNumber);
-    logEntry('SUBTRACT', initialResult, enteredNumber, currentResult);
+    writeToLog('SUBTRACT', initialResult, enteredNumber, currentResult);
 }
 
 function multiply() {
@@ -59,7 +59,7 @@ function multiply() {
     const initialResult = currentResult
     currentResult *= enteredNumber;
     createAndWriteOutput('*', initialResult, enteredNumber);
-    logEntry('MULTIPLY', initialResult, enteredNumber, currentResult);
+    writeToLog('MULTIPLY', initialResult, enteredNumber, currentResult);
 }
 
 function divide() {
@@ -67,7 +67,7 @@ function divide() {
     const initialResult = currentResult
     currentResult /= enteredNumber;
     createAndWriteOutput('/', initialResult, enteredNumber);
-    logEntry('DIVIDE', initialResult, enteredNumber, currentResult);
+    writeToLog('DIVIDE', initialResult, enteredNumber, currentResult);
 }
 
 addBtn.addEventListener('click', add);
